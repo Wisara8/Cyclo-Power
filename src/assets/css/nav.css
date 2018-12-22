@@ -1,0 +1,124 @@
+@media screen and (min-width: 850px){
+  nav {
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    color: white;
+
+    background-color: #203659;
+    box-shadow: 5px 5px lightgrey;
+    transition: box-shadow .5s, transform .5s;
+    height: 40em;
+    width: 18em;
+  }
+
+  nav:hover {
+    box-shadow: 10px 10px lightgrey;
+    transform: scale(1.1);
+  }
+
+  .nav_item:hover {
+    background-color: #eaf2ff;
+    color: black;
+  }
+
+  .toggle_button {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 849px){
+
+  .toggle_button {
+    position: absolute;
+    left: 18em;
+    height: 50px;
+    width: 50px;
+    background-color: darkgrey;
+    box-shadow: 5px 5px lightgrey;
+
+    cursor: pointer;
+  }
+
+  .fa-grip-lines {
+    margin-left: .3em;
+    margin-top: .25em;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+
+    /*TODO: Change the left ems to toggle the nav bar -18em fully hide, 0 fully appear*/
+    left: -18em;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    background-color: #ffc266;
+    box-shadow: 5px 5px lightgrey;
+    transition: box-shadow .5s, transform .5s;
+    height: 40em;
+    width: 18em;
+  }
+}
+
+
+.nav_top_header {
+  background-image: url("../nav.jpg");
+  background-size: cover;
+  flex: 1;
+}
+
+.user_icon {
+  display: block;
+  border-radius: 100px;
+  width: 125px;
+  height: 125px;
+  margin: 0 auto;
+  margin-top: 10%;
+  border: 6px solid white;
+}
+
+.user_name {
+  text-align: center;
+  font-size: 26px;
+}
+
+.user_text {
+  display: block;
+  margin-left: 2.5em;
+  margin-right: 2.5em;
+  font-size: 14px;
+  height: 90px;
+  line-height: 1.4;
+  overflow: hidden;
+}
+
+.nav_items {
+  flex: 2;
+}
+
+.nav_list {
+  margin-top: 1em;
+  list-style: none;
+  /*width: 100%;*/
+  padding: 0;
+  display: block;
+}
+
+.nav_item {
+  /*height: 3em;*/
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 60px;
+  transition: background-color 1s, color 1s;
+
+  cursor: pointer;
+}
