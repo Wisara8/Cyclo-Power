@@ -1,13 +1,9 @@
 <template>
   <section class="map_section">
     <header class="section_header">
-      <h2 class="section_title"> Other crap </h2>
+      <h2 class="section_title"> Trophies </h2>
       <div class="shorter_border"></div>
     </header>
-
-    <div class="map">
-      <h3> MAP </h3>
-    </div>
   </section>
 </template>
 

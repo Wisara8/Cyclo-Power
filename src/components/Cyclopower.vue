@@ -15,10 +15,10 @@
         <p class="user_text"> I am a placeholderI am a placeholderI am a placeholderI am a placeholderI am a placeholder </p>
 
         <ul class="nav_list">
-          <li class="nav_item" v-on:click="activity"> Item 1 </li>
-          <li class="nav_item" v-on:click="second"> Item 2 </li>
-          <li class="nav_item"> Item 3 </li>
-          <li class="nav_item"> Item 4 </li>
+          <li class="nav_item" v-on:click="activity"> My Activity</li>
+          <li class="nav_item" v-on:click="trophy"> My Trophies </li>
+          <li class="nav_item" v-on:click="lottery"> Lottery </li>
+          <li class="nav_item" v-on:click="statistics"> My Statistics </li>
         </ul>
       </div>
     </nav>
@@ -31,12 +31,16 @@
 
 <script>
   import UserActivity from './UserActivity.vue';
-  import Placeholder from './Placeholder.vue';
+  import Trophy from './Trophy.vue';
+  import Lottery from './Lottery.vue';
+  import Stats from './Stats.vue';
 
   export default {
     components: {
       'user_activity': UserActivity,
-      'placeholder': Placeholder
+      'trophies': Trophy,
+      'lottery': Lottery,
+      'stats': Stats,
     },
     data() {
       return {
@@ -47,8 +51,14 @@
       activity: function(event) {
         this.component = 'user_activity';
       },
-      second: function(event) {
-        this.component = 'placeholder';
+      trophy: function(event) {
+        this.component = 'trophies';
+      },
+      lottery: function(event) {
+        this.component = 'lottery';
+      },
+      statistics: function(event) {
+        this.component = 'stats';
       }
     }
   }
